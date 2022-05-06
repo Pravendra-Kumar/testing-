@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+	struct s1
+	{
+		int a;
+		float b;
+		char c;
+	};
+	
+	struct s2
+	{
+		float d;
+		struct s1 e;
+		float f;
+		
+	};
+	
+	struct s2 g={ 20.5, {10,10.5,'x' },44.5 };
+	
+	printf("%f\n",g.d);
+	printf("%f\n",g.f);
+	printf("%d\n",g.e.a);
+	printf("%f\n",g.e.b);
+	printf("%f\n",g.e.c);
+
+	
+	;
+}
